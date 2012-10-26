@@ -1,5 +1,5 @@
 def full_title(page_title)
-  base_title = "A website for IELTS essay review"
+  base_title = "Welcome to Essay Review Playground"
   if page_title.empty?
     base_title
   else
