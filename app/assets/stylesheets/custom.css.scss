@@ -200,7 +200,6 @@ input, textarea, select, .uneditable-input {
 }
 
 /* users index */
-
 .users {
   list-style: none;
   margin: 0;
@@ -214,9 +213,9 @@ input, textarea, select, .uneditable-input {
   }
 }
 
-/* microposts */
+/* posts */
 
-.microposts {
+.posts {
   list-style: none;
   margin: 10px 0 0 0;
 
@@ -224,6 +223,9 @@ input, textarea, select, .uneditable-input {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
+}
+.title {
+  display: block;
 }
 .content {
   display: block;
