@@ -3,6 +3,7 @@ class PostsController < ApplicationController
     if signed_in?
       @post = Post.new
     else
-      redirect_to root_url
+      redirect_to signin_url
+    end
   end
 end
