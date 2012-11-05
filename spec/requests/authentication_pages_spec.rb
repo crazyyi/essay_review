@@ -42,15 +42,14 @@ describe "AuthenticationPages" do
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
       
-
       describe "in the posts controller" do
-        describe "submitting to the create action" do
-          before { post post_path }
+        describe "going into new post form" do
+          before { get newpost_path }
           specify { response.should redirect_to(signin_path) }
         end
 
         describe "submitting to the destroy action" do
-          before { delete post_path(FactoryGirl.create(:post)) }
+          before { delete newpost_path(FactoryGirl.create(:post)) }
           specify { response.should redirect_to(signin_path) }
         end
       end

@@ -1,9 +1,5 @@
 EssayReview::Application.routes.draw do
-  get "post/new"
 
-  get "post/edit"
-
-  resources :posts
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts,    only: [:create, :edit, :destroy]
@@ -18,7 +14,8 @@ EssayReview::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  match '/newpost', to: 'posts#create'
+  match '/newpost', to: 'posts#new'
+  match '/showpost/:id', to: 'posts#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
