@@ -18,6 +18,7 @@ describe "post pages" do
     describe "new post page" do
       before { visit newpost_path }
       it { should have_selector('h1', text: 'Compose a new essay') }
+      it { should have_button('Create Post') }
     end
   end
 end
